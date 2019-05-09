@@ -79,7 +79,8 @@ function handler (activePageSlug, config) {
         show_on_home: dirMetadata.show_on_home ? (dirMetadata.show_on_home === 'true') : config.show_on_home_default,
         is_index: false,
         is_directory: true,
-        active: activePageSlug.startsWith('/' + fileSlug),
+        active: false,
+        parent_active: activePageSlug.startsWith('/' + fileSlug),
         class: 'category-' + contentProcessors.cleanString(shortPath),
         sort: dirMetadata.sort || sort,
         files: []
